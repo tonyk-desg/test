@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <SCript src="../js/jquery.cookie.js"></SCript>
+    <script src="../js/api.js"></script>
+    <script src="../js/index.js"></script>
+    <link rel="stylesheet" href="../css/index.css" type="text/css">
+    <link rel="stylesheet" href="../css/public.css" type="text/css">
+</head>
+
+<body>
+    <div class="index_page">
+        <div class="index-container">
+            <!-- 头部栏 -->
+            <div class="header-bar">
+                <div class="header-btn">
+                    <!-- 登录按钮 -->
+                    <div class="login-btn">
+                        <span style="cursor: pointer;" onclick="dialogVisible(true,'.login-dialog')">登录</span>
+                        <span>|</span>
+                        <span style="cursor: pointer;" onclick="dialogVisible(true,'.register-dialog')">注册</span>
+                    </div>
+                    <span>我的订单</span>
+                    <span>我的收藏</span>
+                    <!-- 购物车 -->
+                    <div class="shopping-car">
+                        <img src="../img/shopping-car.png" alt="">
+                        <span>购物车(0)</span>
+                    </div>
+                </div>
+            </div>
+            <!-- 内容 -->
+            <div class="content">
+                <!-- 导航栏 -->
+                <div class="navi-bar align-centent">
+                    <!-- 导航栏左边部分 -->
+                    <div class="navi-left">
+                        <!-- logo -->
+                        <div class="logo">
+                            <img src="../img/Rectangle 140.png" alt="">
+                        </div>
+                        <!-- 导航按钮 -->
+                        <div class="navi-btn">
+                            <span class="select">首页</span>
+                            <span>全部商品</span>
+                            <span>关于我们</span>
+                        </div>
+                    </div>
+                    <!-- 导航栏右边部分 -->
+                    <div class="navi-right">
+                        <input type="text" placeholder="请输入内容">
+                        <button></button>
+                    </div>
+                </div>
+                
+                <!-- 轮播图 -->
+                <div class="banner">
+                    <div class="flex-slider align-centent">
+                        <div class="slider">
+                            
+                        </div>
+                        <!-- 底部控制图片按钮 -->
+                        <div class="slider-control">
+                            <!-- <span class="btn-ative"></span>
+                            <span></span>
+                            <span></span>
+                            <span></span> -->
+                        </div>
+                        <!-- 下一个和上一个按钮 -->
+                        <div class="next-btn"></div>
+                        <div class="prev-btn"></div>
+                    </div>
+
+                </div>
+                <!-- 内容 -->
+                <div class="content-main">
+                    <!-- 手机模块 -->
+                    <div class="content-items align-centent" id="phone">
+                        <P>手机</P>
+                        <div class="content-item">
+                            <!-- 大图 -->
+                            <div class="content-item-max">
+                            </div>
+                            <!-- 小图 -->
+                            <div class="content-item-min">
+                                <ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 家电模块 -->
+                    <div class="content-items-others align-centent" id="appliance">
+                        <P>家电</P>
+                        <div class="content-item" >
+                            <!-- 大图 -->
+                            <div class="content-item-min-left">
+                                
+                            </div>
+                            <!-- 小图 -->
+                            <div class="content-item-min">
+                                <ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 配件模块 -->
+                    <div class="content-items-others align-centent" id="accessory">
+                        <P>手机</P>
+                        <div class="content-item">
+                            <!-- 大图 -->
+                            <div class="content-item-min-left">
+                               
+                            </div>
+                            <!-- 小图 -->
+                            <div class="content-item-min">
+                                <ul>
+                                   
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 底部 -->
+                <div class="footer">
+                    <!-- 底部提示 -->
+                    <div class="footer-tips">
+                        <div class="tip-item">
+                            <img src="../img/安全盾icon.png" alt="">
+                            <span>7天无理由退货</span>
+                        </div>
+                        <div class="tip-item">
+                            <img src="../img/安全盾icon.png" alt="">
+                            <span>满99元全场免邮</span>
+                        </div>
+                        <div class="tip-item">
+                            <img src="../img/安全盾icon.png" alt="">
+                            <span>100%品质保证</span>
+                        </div>
+                    </div>
+                    <!-- 底部内容 -->
+                    <div class="footer-content">
+                        <!-- 底部logo -->
+                        <img src="../img/黑猫logo.png" alt="">
+                        <!-- 底部按钮 -->
+                        <div class="footer-btn">
+                            <span>首页</span>
+                            <span>|</span>
+                            <span>全部商品</span>
+                            <span>|</span>
+                            <span>关于我们</span>
+                        </div>
+                        <span>商城版权所有 © 2012-2021 </span>
+                    </div>
+                </div>
+                <!-- 注册弹窗 -->
+                <div class="form-dialog register-dialog" onclick="dialogVisible(false,'.login-dialog')">
+                    <!-- 表单 -->
+                    <div class="form-content" onclick="event.stopPropagation()">
+                        <div class="header">
+                            <span></span>
+                            <span>注册</span>
+                            <span style="cursor: pointer;" onclick="dialogVisible(false,'.register-dialog')">×</span>
+                        </div>
+                        <!-- 内容 -->
+                        <div class="body">
+                            <div class="input-item">
+                                <div class="input-row">
+                                    <input type="text" placeholder="请输入账号" name="username"
+                                        style="background-image: url('../img/id.png');" />
+                                </div>
+                                <!-- 提示 -->
+                                <div class="err-msg"></div>
+                            </div>
+                            <div class="input-item">
+                                <div class="input-row">
+                                    <input type="text" placeholder="请输入密码" name="password"
+                                        style="background-image: url('../img/pass.png');" />
+                                </div>
+                                <!-- 提示 -->
+                                <div class="err-msg"></div>
+                            </div>
+                            <div class="input-item">
+                                <div class="input-row">
+                                    <input type="text" placeholder="请再次输入密码" name="re-password"
+                                        style="background-image: url('../img/pass.png');" />
+                                </div>
+                                <!-- 提示 -->
+                                <div class="err-msg"></div>
+                            </div>
+                        </div>
+                        <!-- 按钮 -->
+                        <div class="dialog-btn">
+                            <button onclick="handRegsiter()">注册</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 登录弹窗 -->
+                <div class="form-dialog login-dialog" onclick="dialogVisible(false,'.login-dialog')">
+                    <!-- 表单 -->
+                    <div class="form-content" onclick="event.stopPropagation()">
+                        <div class="header">
+                            <span></span>
+                            <span>登录</span>
+                            <span style="cursor: pointer;" onclick="dialogVisible(false,'.login-dialog')">×</span>
+                        </div>
+                        <!-- 内容 -->
+                        <div class="body">
+                            <div class="input-item">
+                                <div class="input-row">
+                                    <input type="text" placeholder="请输入账号" name="username"
+                                        style="background-image: url('../img/id.png');" />
+                                </div>
+                                <!-- 提示 -->
+                                <div class="err-msg"></div>
+                            </div>
+                            <div class="input-item">
+                                <div class="input-row">
+                                    <input type="text" placeholder="请输入密码" name="password"
+                                        style="background-image: url('../img/pass.png');" />
+                                </div>
+                                <!-- 提示 -->
+                                <div class="err-msg"></div>
+                            </div>
+                        </div>
+                        <!-- 按钮 -->
+                        <div class="dialog-btn">
+                            <button onclick="handLogin()">登录</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

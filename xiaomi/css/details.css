@@ -1,0 +1,437 @@
+.index-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* 头部栏css */
+.header-bar {
+    width: 100%;
+    min-width: 1280px;
+    height: 42px;
+    background-color: #3D3D3D;
+    color: rgba(176, 176, 176, 1);
+    font-size: 14px;
+    position: relative;
+}
+
+.header-btn {
+    height: 42px;
+    display: flex;
+    margin-right: 60px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header-bar span {
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.header-bar span:hover {
+    color: white;
+}
+
+.login-btn {
+    padding: 0 10px;
+}
+
+.shopping-car {
+    width: 120px;
+    height: 42px;
+    background: rgba(66, 66, 66, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 10px;
+}
+
+.content {
+    width: 100%;
+    min-width: 1280px;
+}
+
+/* 导航栏css */
+.navi-bar {
+    width: 1000px;
+    height: 61px;
+    margin-top: 20px;
+    border-bottom: 1px solid rgba(230, 230, 230, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navi-left {
+    display: flex;
+}
+
+.logo {
+    width: 186px;
+    height: 61px;
+}
+
+.navi-btn {
+    height: 100%;
+    margin-left: 102px;
+    display: flex;
+}
+
+.navi-btn span {
+    height: 61px;
+    line-height: 61px;
+    font-size: 14px;
+    color: rgba(144, 147, 153, 1);
+    text-align: center;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.navi-btn .select {
+    box-sizing: border-box;
+    color: rgba(64, 158, 255, 1);
+    border-bottom: 2px solid rgba(64, 158, 255, 1);
+}
+
+.navi-right {
+    display: flex;
+}
+
+.navi-right input {
+    width: 244px;
+    height: 39px;
+    border: 1px solid #DCDFE6;
+    border-right: 0;
+    border-radius: 4px 0 0 4px;
+    box-sizing: border-box;
+}
+
+.navi-right button {
+    width: 56px;
+    height: 39px;
+    background: url('../img/Vector.png') no-repeat center;
+    background-size: 12.23px 12.23px;
+    background-color: rgba(245, 247, 250, 1);
+    border: 1px solid #DCDFE6;
+    border-radius: 0 4px 4px 0;
+    box-sizing: border-box;
+}
+
+/* 商品导航栏css */
+.navi-shopping{
+    width: 100%;
+    height: 62px;
+    box-shadow: 0px 4px 10px 0px rgba(148, 148, 148, 0.25);
+
+}
+.navi-shopping-items{
+    width: 1220px;
+    height: 62px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.shopping-name{
+    font-size: 18px;
+    color: rgba(51, 51, 51, 1);
+}
+.navi-shopping-btn{
+    width: 152px;
+    font-size: 14px;
+    color: rgba(96, 98, 102, 1);
+    display: flex;
+    justify-content: space-between;
+}
+.navi-shopping-btn span:hover{
+    cursor: pointer;
+}
+/* 商品详情css */
+.content-main{
+    width: 1226px;
+    height: 546px;
+    margin-top: 34px !important;
+    margin-bottom: 39px !important;
+    display: flex;
+    justify-content: space-between;
+}
+.slider-control {
+    width: 144px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+.content-left{
+    width: 520px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.next-btn {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 50%;
+    right: -36px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: url('../img/Frame\ 166.png') no-repeat center;
+    background-color: rgba(152, 152, 152, 0.2);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.next-btn:hover {
+    background-color: rgba(152, 152, 152, 0.52);
+}
+
+.prev-btn {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 50%;
+    left: -36px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: url('../img/Frame\ 166 (1).png') no-repeat center;
+    background-color: rgba(152, 152, 152, 0.2);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.prev-btn:hover {
+    background-color: rgba(152, 152, 152, 0.52);
+}
+.banner{
+    width: 520px;
+    height: 518px;
+    display: flex;
+    transition: all 0.5s ease-in-out;
+}
+.banner img{
+    width: 520px;
+}
+.content-left:hover .prev-btn{
+    left: 30px;
+}
+.content-left:hover .next-btn{
+    right: 30px;
+}
+.slider-control li {
+    width: 30px;
+    height: 2px;
+    background: rgba(220, 223, 230, 1);
+    cursor: pointer;
+    margin-left: 5px;
+}
+.btn-ative {
+    background: rgba(176, 176, 176, 1)!important;
+}
+.content-right{
+    width: 642px;
+    height: 521px;
+}
+.shopping-intro{
+    width: 642px;
+    height: 187px;
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+    display: flex;
+    flex-direction: column;
+}
+.shopping-intro .shopping-name{
+    font-size: 24px;
+}
+.shopping-intro .shopping-details{
+    font-size: 16px;
+    line-height:19.2px;
+    color: rgba(176, 176, 176, 1);
+    margin-top: 12px;
+}
+.shopping-intro .shopping-self{
+    font-size: 16px;
+    color:rgba(255, 103, 0, 1);
+    margin-top: 12px;
+}
+.shopping-price{
+    margin-top: 26px;
+}
+.shopping-price span:nth-of-type(1){
+    font-size: 18px;
+    color:rgba(255, 103, 0, 1);
+}
+.shopping-price span:nth-of-type(2){
+    font-size: 14px;
+    color: rgba(176, 176, 176, 1);
+    text-decoration: line-through;
+}
+.shopping-price-box{
+    margin-top: 50px;
+    width: 100%;
+    height: 136px;
+    font-size: 16px;
+    color: rgba(96, 98, 102, 1);
+    background: rgba(249, 249, 250, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.box-line-frist{
+    width: 520px;
+    margin-left: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.box-line-frist .shopping-name{
+    font-size: 16px;
+    color: rgba(96, 98, 102, 1);
+
+}
+.box-line-frist-price span:nth-of-type(2){
+    text-decoration: line-through;
+}
+.price-total{
+    font-size: 24px;
+    margin-left: 60px;
+    color: rgba(255, 103, 0, 1);
+}
+.buy-btn{
+    width: 340px;
+    height: 56px;
+    font-size: 16px;
+    color: white;
+    background: rgba(255, 103, 0, 1);
+    border: 0;
+    margin-top: 54px;
+}
+.shopping-assure{
+    width: 100%;
+    height: 16px;
+    display: flex;
+    margin-top: 22px;
+}
+.assure-item{
+    font-size: 16px;
+    color: rgba(176, 176, 176, 1);
+    display: flex;
+    align-items: center;
+    margin-right: 22px;
+}
+.assure-item span{
+    margin-left: 6px;
+}
+/* 底部css */
+.footer {
+    width: 100%;
+    height: 336px;
+    margin-top: 24px;
+    background: rgba(47, 47, 47, 1);
+    position: relative;
+    bottom: 0px;
+}
+
+.footer-tips {
+    width: 984px;
+    height: 42px;
+    padding-top: 54px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.tip-item {
+    width: 204px;
+    height: 42px;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-content {
+    width: 100%;
+    height: 130px;
+    position: absolute;
+    bottom: 36px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-content span {
+    color: rgb(136, 136, 136);
+
+}
+
+.footer-btn {
+    width: 210px;
+    height: 17px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* 注册弹窗CSS */
+.form-dialog{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    top:0;
+    left: 0;
+    display: none;
+}
+.form-content{
+    width: 360px;
+    background-color: #fff;
+    position: absolute;
+    top: 166px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 24px 28px 40px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 38px;
+}
+.form-content .body{
+    width: 100%;
+}
+.input-item{
+    width: 100%;
+    height: 60px;
+}
+.input-row input{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: 1px solid #dfdfdf;
+    box-sizing: border-box;
+    border-radius:  3px;
+    padding: 0 20px 0 40px;
+    background-repeat: no-repeat ;
+    background-position: 10px 50% ;
+}
+.err-msg{
+    color: #F56C6C;
+    font-size: 12px;
+}
+.dialog-btn button{
+    width: 100%;
+    height: 38PX;
+    background-color: #409eff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.dialog-btn button:hover{
+    background-color: #1b8dff;
+}
